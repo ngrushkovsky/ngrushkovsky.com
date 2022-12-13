@@ -1,8 +1,7 @@
+const prettierConfig = require('@ngrushkovsky/prettier-config')
+
 module.exports = {
-  bracketSpacing: false,
-  semi: false,
-  singleQuote: true,
-  trailingComma: 'all',
+  ...prettierConfig,
   pluginSearchDirs: false,
   plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
 }
