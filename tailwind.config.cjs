@@ -22,6 +22,12 @@ module.exports = {
     },
   ],
   theme: {
+    animation: {
+      first: 'fade-in-up 750ms backwards 150ms',
+      second: 'fade-in-up 750ms backwards 300ms',
+      third: 'fade-in-up 750ms backwards 450ms',
+      fourth: 'fade-in-up 750ms backwards 600ms',
+    },
     colors: {
       black: colors.black,
       gray: colors.neutral,
@@ -39,6 +45,18 @@ module.exports = {
         },
       ],
     }),
+    keyframes: {
+      'fade-in-up': {
+        from: {
+          opacity: 0,
+          transform: 'translateY(1rem)',
+        },
+        to: {
+          opacity: 1,
+          transform: 'translateY(0)',
+        },
+      },
+    },
     letterSpacing: {
       normal: '0.015625rem',
     },

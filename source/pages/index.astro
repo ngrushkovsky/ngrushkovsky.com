@@ -9,7 +9,7 @@ const { about, connect, footer, header } = content
 
 <Shell class="bg-gray-900 text-gray-200 selection:bg-gray-200 selection:text-gray-900">
   <div class="min-h-screen lg:pt-48">
-    <header class="py-24">
+    <header class="py-24 motion-safe:animate-first">
       <Constraint>
         <h1 class="font-semibold text-white">{header.title}</h1>
         <p class="text-gray-400">{header.subtitle}</p>
@@ -19,12 +19,12 @@ const { about, connect, footer, header } = content
     <main class="mt-48 py-24">
       <Constraint>
         <main>
-          <section>
+          <section class="motion-safe:animate-second">
             <h2 class="font-semibold text-white">{about.title}</h2>
             <p class="mt-24">{about.body}</p>
           </section>
 
-          <section class="mt-48">
+          <section class="mt-48 motion-safe:animate-third">
             <h2 class="font-semibold text-white">{connect.title}</h2>
             <p class="mt-24">{connect.body}</p>
             <dl class="mt-24 flex flex-col gap-y-24 sm:gap-y-12">
@@ -45,7 +45,7 @@ const { about, connect, footer, header } = content
     </main>
   </div>
 
-  <footer class="mt-48 border-t border-t-gray-800 py-24">
+  <footer class="mt-48 border-t border-t-gray-800 py-24 motion-safe:animate-fourth">
     <Constraint>
       <p class="text-gray-400">{footer.body}</p>
     </Constraint>
