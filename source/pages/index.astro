@@ -1,10 +1,53 @@
 ---
+import Constraint from '../components/Constraint.astro'
+import ExternalLink from '../components/ExternalLink.astro'
+import Shell from '../components/Shell.astro'
+import content from '../content.json'
+
+const { about, connect, footer, header } = content
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Nikolai Grushkovsky</title>
-  </head>
-  <body>🚀</body>
-</html>
+<Shell class="bg-gray-900 text-gray-200 selection:bg-gray-200 selection:text-gray-900">
+  <div class="min-h-screen lg:pt-48">
+    <header class="py-24">
+      <Constraint>
+        <h1 class="font-semibold text-white">{header.title}</h1>
+        <p class="text-gray-400">{header.subtitle}</p>
+      </Constraint>
+    </header>
+
+    <main class="mt-48 py-24">
+      <Constraint>
+        <main>
+          <section>
+            <h2 class="font-semibold text-white">{about.title}</h2>
+            <p class="mt-24">{about.body}</p>
+          </section>
+
+          <section class="mt-48">
+            <h2 class="font-semibold text-white">{connect.title}</h2>
+            <p class="mt-24">{connect.body}</p>
+            <dl class="mt-24 flex flex-col gap-y-24 sm:gap-y-12">
+              {
+                connect.links.map(({ name, url, value }) => (
+                  <div class="sm:flex">
+                    <dt class="text-gray-400 sm:w-1/4">{name}</dt>
+                    <dd class="sm:w-3/4">
+                      <ExternalLink href={url}>{value}</ExternalLink>
+                    </dd>
+                  </div>
+                ))
+              }
+            </dl>
+          </section>
+        </main>
+      </Constraint>
+    </main>
+  </div>
+
+  <footer class="mt-48 border-t border-t-gray-800 py-24">
+    <Constraint>
+      <p class="text-gray-400">{footer.body}</p>
+    </Constraint>
+  </footer>
+</Shell>
