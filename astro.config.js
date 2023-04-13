@@ -1,8 +1,8 @@
 import tailwind from '@astrojs/tailwind'
-import { defineConfig } from 'astro/config'
 
-export default defineConfig({
+/** @type {import('astro/config').AstroUserConfig} */
+export default {
   integrations: [tailwind()],
   outDir: 'target',
   srcDir: 'source',
-})
+}
