@@ -5,7 +5,7 @@
   },
   "header": {
     "title": "Nikolai Grushkovsky",
-    "subtitle": "Freelance Software Developer"
+    "subtitle": "Full-Stack Software Developer"
   },
   "about": {
     "title": "About",
@@ -13,7 +13,7 @@
   },
   "connect": {
     "title": "Connect",
-    "body": "Meeting new people is always exciting, let's connect!",
+    "body": "I'm always open to meeting new people. Feel free to reach out!",
     "links": [
       {
         "name": "Email",
@@ -26,9 +26,9 @@
         "value": "@ngrushkovsky"
       },
       {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/ngrushkovsky/",
-        "value": "in/ngrushkovsky"
+        "name": "Twitter",
+        "url": "https://twitter.com/ngrushkovsky",
+        "value": "@ngrushkovsky"
       }
     ]
   },
