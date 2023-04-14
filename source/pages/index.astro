@@ -18,29 +18,27 @@ const { about, connect, footer, header } = content
 
     <main class="mt-48 py-24">
       <Constraint>
-        <main>
-          <section class="motion-safe:animate-second">
-            <h2 class="font-semibold text-white">{about.title}</h2>
-            <p class="mt-24">{about.body}</p>
-          </section>
+        <section class="motion-safe:animate-second">
+          <h2 class="font-semibold text-white">{about.title}</h2>
+          <p class="mt-24">{about.body}</p>
+        </section>
 
-          <section class="mt-48 motion-safe:animate-third">
-            <h2 class="font-semibold text-white">{connect.title}</h2>
-            <p class="mt-24">{connect.body}</p>
-            <dl class="mt-24 flex flex-col gap-y-24 sm:gap-y-12">
-              {
-                connect.links.map(({ name, url, value }) => (
-                  <div class="sm:flex">
-                    <dt class="text-gray-400 sm:w-1/4">{name}</dt>
-                    <dd class="sm:w-3/4">
-                      <ExternalLink href={url}>{value}</ExternalLink>
-                    </dd>
-                  </div>
-                ))
-              }
-            </dl>
-          </section>
-        </main>
+        <section class="mt-48 motion-safe:animate-third">
+          <h2 class="font-semibold text-white">{connect.title}</h2>
+          <p class="mt-24">{connect.body}</p>
+          <dl class="mt-24 flex flex-col gap-y-24 sm:gap-y-12">
+            {
+              connect.links.map(({ name, url, value }) => (
+                <div class="sm:flex">
+                  <dt class="text-gray-400 sm:w-1/4">{name}</dt>
+                  <dd class="sm:w-3/4">
+                    <ExternalLink href={url}>{value}</ExternalLink>
+                  </dd>
+                </div>
+              ))
+            }
+          </dl>
+        </section>
       </Constraint>
     </main>
   </div>
